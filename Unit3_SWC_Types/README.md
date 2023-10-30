@@ -15,12 +15,12 @@
 
 ## System Overview
 
-![System_Look](./1.Readme_Img/System.PNG)
+![System Overview](./1.Readme_Img/System.PNG)
 
 ---
 ## ARXML Output for SWC Only
-![System_Look](./1.Readme_Img/System1.JPG)
-![System_Look](./1.Readme_Img/System2.JPG)
+![ARXML Output1](./1.Readme_Img/System1.JPG)
+![ARXML Output2](./1.Readme_Img/System2.JPG)
 
 ---
 ## ARXML Output AR-PACKAGE
