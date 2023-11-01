@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 file//../../AUTOSAR_ARXML_Schema/AUTOSAR_00046.xsd">
+	<AR-PACKAGES>
+		<!-- ++ Package for all SWCs ++ -->
+		<AR-PACKAGE>
+			<SHORT-NAME>SWCs</SHORT-NAME>
+			<!-- ++  EABS ++ -->
+			<AR-PACKAGES>
+				<AR-PACKAGE>
+					<SHORT-NAME>SWCs_EABS</SHORT-NAME>
+					<ELEMENTS>
+						<!-- ++ 	SENSOR-ACTUATOR SWCs ++ -->
+						<SENSOR-ACTUATOR-SW-COMPONENT-TYPE>
+							<!-- Lidar Sensor Data  -->
+							<SHORT-NAME>SWC1_SA_LidarSensor</SHORT-NAME>
+							<!-- SWC1_Ports  -->
+							<PORTS>
+								<!-- PORT1 for LidarData-->
+								<P-PORT-PROTOTYPE>
+									<SHORT-NAME>P1_LidarData</SHORT-NAME>
+									<PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Interfaces/SRI_EABS/SRI_Lidar/SRI_u32</PROVIDED-INTERFACE-TREF>
+								</P-PORT-PROTOTYPE>
+							</PORTS>
+						</SENSOR-ACTUATOR-SW-COMPONENT-TYPE>
+						<SENSOR-ACTUATOR-SW-COMPONENT-TYPE>
+							<!-- Speed Sensor Data  -->
+							<SHORT-NAME>SWC2_SA_SpeedSensor</SHORT-NAME>
+							<!-- SWC2_Ports  -->
+							<PORTS>
+								<!-- PORT3 for speed data -->
+								<P-PORT-PROTOTYPE>
+									<SHORT-NAME>P3_speedData</SHORT-NAME>
+									<PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Interfaces/SRI_EABS/SRI_Lidar/SRI_u32</PROVIDED-INTERFACE-TREF>
+								</P-PORT-PROTOTYPE>
+							</PORTS>
+						</SENSOR-ACTUATOR-SW-COMPONENT-TYPE>
+						<SENSOR-ACTUATOR-SW-COMPONENT-TYPE>
+							<!-- Waring LED Indicator  -->
+							<SHORT-NAME>SWC6_SA_WarningLED</SHORT-NAME>
+							<!-- SWC6_Ports  -->
+							<PORTS>
+								<R-PORT-PROTOTYPE>
+									<SHORT-NAME>P6_warningLedIndicator</SHORT-NAME>
+									<REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Interfaces/SRI_EABS/SRI_Lidar/SRI_bool</REQUIRED-INTERFACE-TREF>
+								</R-PORT-PROTOTYPE>
+							</PORTS>
+						
+						</SENSOR-ACTUATOR-SW-COMPONENT-TYPE>
+						<!-- ++ 	ECU-ABSTRACTION SWCs ++ -->
+						<ECU-ABSTRACTION-SW-COMPONENT-TYPE>
+							<!-- ECU abstraction for IOs  -->
+							<SHORT-NAME>SWC3_ECABS_IO_Abstraction</SHORT-NAME>
+						</ECU-ABSTRACTION-SW-COMPONENT-TYPE>
+						<!-- ++ 	APPLICATION SWCs ++ -->
+						<APPLICATION-SW-COMPONENT-TYPE>
+							<!-- EABS Algorithm -->
+							<SHORT-NAME>SWC4_APP_EABS</SHORT-NAME>
+							<PORTS>
+								<!-- PORT2 for Lidar data -->
+								<R-PORT-PROTOTYPE>
+									<SHORT-NAME>P2_LidarData</SHORT-NAME>
+									<REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Interfaces/SRI_EABS/SRI_Lidar/SRI_u32</REQUIRED-INTERFACE-TREF>
+								</R-PORT-PROTOTYPE>
+								<!-- PORT4 for speed data -->
+								<R-PORT-PROTOTYPE>
+									<SHORT-NAME>P4_speedData</SHORT-NAME>
+									<REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Interfaces/SRI_EABS/SRI_Lidar/SRI_u32</REQUIRED-INTERFACE-TREF>
+								</R-PORT-PROTOTYPE>
+								<!-- PORT5 for warning led -->
+								<P-PORT-PROTOTYPE>
+									<SHORT-NAME>P5_warningLedIndicator</SHORT-NAME>
+									<PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Interfaces/SRI_EABS/SRI_Lidar/SRI_bool</PROVIDED-INTERFACE-TREF>
+								</P-PORT-PROTOTYPE>
+							</PORTS>
+						</APPLICATION-SW-COMPONENT-TYPE>
+						<!-- ++ 	PARAMETER SWCs ++ -->
+						<PARAMETER-SW-COMPONENT-TYPE>
+							<!-- Disance Parameters -->
+							<SHORT-NAME>SWC5_PARM_DistanceParameters</SHORT-NAME>
+						</PARAMETER-SW-COMPONENT-TYPE>
+						<!-- ++ 	COMPLEX-DEVICE-DRIVER SWCs ++ -->
+						<COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE>
+							<!-- Bracking component  -->
+							<SHORT-NAME>SWC7_CDD_Braking</SHORT-NAME>
+						</COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE>
+						<!-- ++ 	SERVICE SWCs ++ -->
+						<SERVICE-SW-COMPONENT-TYPE>
+							<!-- Diagnostics Service  -->
+							<SHORT-NAME>SWC8_SRVS_DigM</SHORT-NAME>
+						</SERVICE-SW-COMPONENT-TYPE>
+						<!-- ++ 	COMPLEX-DEVICE-DRIVER SWCs ++ -->
+						<NV-BLOCK-SW-COMPONENT-TYPE>
+							<!-- NVM for FLASH  -->
+							<SHORT-NAME>SWC9_NV_Flash</SHORT-NAME>
+						</NV-BLOCK-SW-COMPONENT-TYPE>
+					</ELEMENTS>
+				</AR-PACKAGE>
+			</AR-PACKAGES>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

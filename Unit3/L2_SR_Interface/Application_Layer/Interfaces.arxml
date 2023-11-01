@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 file//../../AUTOSAR_ARXML_Schema/AUTOSAR_00046.xsd">
+	<AR-PACKAGES>
+		<!-- ++ Package for all SWCs ++ -->
+		<AR-PACKAGE>
+			<SHORT-NAME>Interfaces</SHORT-NAME>
+			<AR-PACKAGES>
+				<AR-PACKAGE>
+					<!-- Sender/Receiver Interfaces Package for EABS app -->
+					<SHORT-NAME>SRI_EABS</SHORT-NAME>
+					<ELEMENTS>
+						<!-- Sender/Receiver Interface for Lidar Sensor Data -->
+						<SENDER-RECEIVER-INTERFACE>
+							<SHORT-NAME>SRI_Lidar</SHORT-NAME>
+							<!-- Interface Between APP SWC & SA SWC -->
+							<IS-SERVICE>false</IS-SERVICE>
+							<DATA-ELEMENTS>
+								<!-- Distance of Object -->
+								<VARIABLE-DATA-PROTOTYPE>
+									<SHORT-NAME>SRI_u32</SHORT-NAME>
+									<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint32</TYPE-TREF>
+								</VARIABLE-DATA-PROTOTYPE>
+								<VARIABLE-DATA-PROTOTYPE>
+									<SHORT-NAME>SRI_bool</SHORT-NAME>
+									<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/boolean</TYPE-TREF>
+								</VARIABLE-DATA-PROTOTYPE>
+								
+							</DATA-ELEMENTS>
+						</SENDER-RECEIVER-INTERFACE>
+					</ELEMENTS>
+				</AR-PACKAGE>
+			</AR-PACKAGES>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>
+
