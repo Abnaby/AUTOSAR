@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 file//../../AUTOSAR_ARXML_Schema/AUTOSAR_00046.xsd">
+	<AR-PACKAGES>
+		<!-- ++ Package for all SWCs ++ -->
+		<AR-PACKAGE>
+			<SHORT-NAME>Interfaces</SHORT-NAME>
+			<AR-PACKAGES>
+				<AR-PACKAGE>
+					<!-- Sender/Receiver Interfaces Package for EABS app -->
+					<SHORT-NAME>I_EABS</SHORT-NAME>
+					<ELEMENTS>
+						<!-- Sender/Receiver Interface for Lidar Sensor Data -->
+						<SENDER-RECEIVER-INTERFACE>
+							<SHORT-NAME>SRI_Lidar</SHORT-NAME>
+							<!-- Interface Between APP SWC & SA SWC -->
+							<IS-SERVICE>false</IS-SERVICE>
+							<DATA-ELEMENTS>
+								<!-- Distance of Object -->
+								<VARIABLE-DATA-PROTOTYPE>
+									<SHORT-NAME>SRI_u32</SHORT-NAME>
+									<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint32</TYPE-TREF>
+								</VARIABLE-DATA-PROTOTYPE>
+								<VARIABLE-DATA-PROTOTYPE>
+									<SHORT-NAME>SRI_bool</SHORT-NAME>
+									<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/boolean</TYPE-TREF>
+								</VARIABLE-DATA-PROTOTYPE>
+							</DATA-ELEMENTS>
+						</SENDER-RECEIVER-INTERFACE>
+						<!-- Parameter Interface for Lidar Sensor Data -->
+						<PARAMETER-INTERFACE>
+							<SHORT-NAME>PRI_Lidar</SHORT-NAME>
+							<PARAMETERS>
+								<PARAMETER-DATA-PROTOTYPE>
+									<SHORT-NAME>PRI_CONST_DIST</SHORT-NAME>
+									<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</TYPE-TREF>
+									<INIT-VALUE>
+										<NUMERICAL-VALUE-SPECIFICATION>
+											<VALUE>30</VALUE>
+										</NUMERICAL-VALUE-SPECIFICATION>
+									</INIT-VALUE>
+								</PARAMETER-DATA-PROTOTYPE>
+							</PARAMETERS>
+						</PARAMETER-INTERFACE>
+						<!-- NV Interface for Lidar Sensor Data -->
+						<NV-DATA-INTERFACE>
+							<SHORT-NAME>NV_Data</SHORT-NAME>
+							<NV-DATAS>
+								<VARIABLE-DATA-PROTOTYPE>
+									<SHORT-NAME>NVI_Data</SHORT-NAME>
+									<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint32</TYPE-TREF>
+								</VARIABLE-DATA-PROTOTYPE>																
+							</NV-DATAS>
+						</NV-DATA-INTERFACE>
+						<!-- Client Server Interface for Lidar Sensor Data -->
+						<CLIENT-SERVER-INTERFACE>
+							<SHORT-NAME>CSI_EABS</SHORT-NAME>
+							<OPERATIONS>
+								<!-- CS NV OP -->
+								<CLIENT-SERVER-OPERATION>
+									<SHORT-NAME>NV_OP_SPD</SHORT-NAME>
+									<ARGUMENTS>
+										<ARGUMENT-DATA-PROTOTYPE>
+											<SHORT-NAME>NVI_Speed</SHORT-NAME>
+											<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint32</TYPE-TREF>
+											<DIRECTION>IN</DIRECTION>										
+										</ARGUMENT-DATA-PROTOTYPE>
+									</ARGUMENTS>
+								</CLIENT-SERVER-OPERATION>
+								<!-- CS DIG OP -->
+								<CLIENT-SERVER-OPERATION>
+									<SHORT-NAME>NV_OP_DIG</SHORT-NAME>
+									<ARGUMENTS>
+										<ARGUMENT-DATA-PROTOTYPE>
+											<SHORT-NAME>NVI_DigData</SHORT-NAME>
+											<TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint32</TYPE-TREF>
+											<DIRECTION>IN</DIRECTION>										
+										</ARGUMENT-DATA-PROTOTYPE>
+									</ARGUMENTS>
+								</CLIENT-SERVER-OPERATION>
+							</OPERATIONS>
+						</CLIENT-SERVER-INTERFACE>
+
+					</ELEMENTS>
+				</AR-PACKAGE>
+			</AR-PACKAGES>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>
