@@ -13,7 +13,7 @@
 
 ---
 
-## Define Sender/Receiver Interface
+## Define Interfaces
 ![Interfaces](./1.Readme_Img/AppInterfaces.JPG)
 
 
