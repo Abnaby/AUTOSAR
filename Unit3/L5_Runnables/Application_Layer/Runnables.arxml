@@ -47,6 +47,42 @@
 					<INTERNAL-BEHAVIORS>
 						<SWC-INTERNAL-BEHAVIOR>
 							<SHORT-NAME>SWC1_Behavior</SHORT-NAME>
+								
+							<!-- EVENTS --> 
+							<EVENTS>
+								<!-- Timing Event -->
+								<TIMING-EVENT>
+									<SHORT-NAME>TE_10ms</SHORT-NAME>
+									<START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">SWC1/SWC1_Behavior/Sum_Runnable</START-ON-EVENT-REF>
+									<PERIOD>0.01</PERIOD>
+								</TIMING-EVENT>
+								
+								<!-- Init Event --> 
+								<INIT-EVENT>
+									<SHORT-NAME>IE_Init</SHORT-NAME>
+									<START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">SWC1/SWC1_Behavior/Sum_Runnable</START-ON-EVENT-REF>								
+								</INIT-EVENT>
+								
+								<!-- Data Received Event on VAL1 --> 
+								<DATA-RECEIVED-EVENT>
+									<SHORT-NAME>DRE_Received</SHORT-NAME>
+									<START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">SWC1/SWC1_Behavior/Sum_Runnable</START-ON-EVENT-REF>
+									<DATA-IREF>
+										<TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/SR_IF_Inputs/VAL1</TARGET-DATA-ELEMENT-REF>
+									</DATA-IREF>
+								</DATA-RECEIVED-EVENT>
+								
+								<!-- DATA Write Complete Event -->
+								<DATA-WRITE-COMPLETED-EVENT>
+									<SHORT-NAME>DWCE_DataWrite</SHORT-NAME>
+									<START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">SWC1/SWC1_Behavior/Sum_Runnable</START-ON-EVENT-REF>
+									<EVENT-SOURCE-REF DEST="VARIABLE-ACCESS">/SR_IF_Outputs/Result</EVENT-SOURCE-REF>
+								</DATA-WRITE-COMPLETED-EVENT>
+							
+							</EVENTS>
+							
+							
+							
 							<!-- Runnables --> 
 							<RUNNABLES>
 							<RUNNABLE-ENTITY>
