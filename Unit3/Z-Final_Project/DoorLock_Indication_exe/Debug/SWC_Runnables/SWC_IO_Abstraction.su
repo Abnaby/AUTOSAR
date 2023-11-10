@@ -1,0 +1,2 @@
+SWC_IO_Abstraction.c:24:6:ReadDoorSensor_Runnable	16	static
+SWC_IO_Abstraction.c:38:16:LedSwitch_Runnable	24	static

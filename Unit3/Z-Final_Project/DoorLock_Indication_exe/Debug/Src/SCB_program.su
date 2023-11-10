@@ -1,0 +1,4 @@
+SCB_program.c:70:6:SCB_voidSetPriorityGrouping	16	static
+SCB_program.c:84:6:SCB_voidOffesetVectorTable	16	static
+SCB_program.c:97:6:SCB_voidJumptoApp	16	static
+SCB_program.c:109:6:SCB_voidTrigPendSV	4	static

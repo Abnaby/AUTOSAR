@@ -1,0 +1,4 @@
+MRTOS_Queue.c:6:13:queue_create	16	static
+MRTOS_Queue.c:13:13:queue_add	16	static
+MRTOS_Queue.c:26:13:queue_get	16	static
+MRTOS_Queue.c:37:4:queue_size	16	static

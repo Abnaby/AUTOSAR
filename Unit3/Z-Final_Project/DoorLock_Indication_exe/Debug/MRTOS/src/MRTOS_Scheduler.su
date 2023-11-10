@@ -1,0 +1,13 @@
+MRTOS_Scheduler.c:154:22:MRTOS_staticMainStack	16	static
+MRTOS_Scheduler.c:173:13:MRTOS_staticIdleTask	4	static,ignoring_inline_asm
+MRTOS_Scheduler.c:259:15:MRTOS_voidInit	16	static
+MRTOS_Scheduler.c:291:15:MRTOS_voidCreateTask	32	static
+MRTOS_Scheduler.c:330:15:MRTOS_voidActiveTask	24	static
+MRTOS_Scheduler.c:348:15:MRTOS_voidTerminateTask	24	static
+MRTOS_Scheduler.c:367:15:MRTOS_voidTaskDelay	24	static
+MRTOS_Scheduler.c:384:15:MRTOS_voidStartScheduler	16	static,ignoring_inline_asm
+MRTOS_Scheduler.c:781:13:MRTOS_staticFirstStageSchedular	32	static
+MRTOS_Scheduler.c:837:13:MRTOS_staticSecondStageSchedular	16	static
+MRTOS_Scheduler.c:892:29:PendSV_Handler	0	static,ignoring_inline_asm
+MRTOS_Scheduler.c:972:6:_MRTOS_SVC_CALL_	24	static
+MRTOS_Scheduler.c:1034:13:MRTOS_voidTickerHandler	16	static

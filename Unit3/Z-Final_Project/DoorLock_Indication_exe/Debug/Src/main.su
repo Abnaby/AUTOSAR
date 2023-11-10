@@ -1,0 +1,6 @@
+main.c:34:1:FUNC_T1_ReadDoorSensor_10MS	8	static
+main.c:47:1:FUNC_T2_DoorState_12MS	8	static
+main.c:60:1:FUNC_T3_MainAlgo_15MS	8	static
+main.c:74:1:FUNC_T4_LedState_18MS	8	static
+main.c:94:6:HW_init	16	static
+main.c:114:5:main	16	static
